@@ -95,23 +95,70 @@ ggmap(map6) + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, d
   geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
   geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
   geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
-  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
 
 Road6 <- Road5 + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, data = route_df, lineend = "round") +
   geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
   geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
   geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
-  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
 Road6
 
 Water6 <- Water5 + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, data = route_df, lineend = "round") +
   geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
   geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
   geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
-  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
 Water6
 
+# Adding 2 Hotels 
+hotel1<- geocode("19 Summerleaze Cres, Bude EX23 8HJ, UK")
+hotel2 <- geocode("The Beach At Bude, Bude")
 
+map7 <- get_map(gc1, zoom = 15)
+ggmap(map7) + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, data = route_df, lineend = "round") +
+  geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
+
+Road7 <- Road6 + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, data = route_df, lineend = "round") +
+  geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
+Road7
+
+Water7 <- Water6 + geom_path(aes(x = lon, y = lat), colour = "skyblue", size = 1.5, data = route_df, lineend = "round") +
+  geom_point(aes(x = lon, y = lat), data = gc5, color = "purple", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bar 35"), data = gc5, vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = gc4, color = "blue", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Bude North Cornwall Cricket Club"), data = gc4, hjust=1.05,size=3)+
+  geom_point(aes(x = lon, y = lat), data = hotel1, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="Edgcumbe Hotel"), data = hotel1 vjust=1.4, hjust=0.5,size=3) +
+  geom_point(aes(x = lon, y = lat), data = hotel2, color = "red", size = 3) +
+  geom_text(aes(x = lon, y = lat, label="The Beach At Bude, Bude"), data = hotel2, hjust=1.05,size=3)
+Water7
 
 
 
